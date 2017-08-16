@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>BookThrifter</title>
+
+    <style>
+        
+        body {font-family: "Lato", sans-serif;}
+
+        /* Style the tab */
+        div.tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        /* Style the buttons inside the tab */
+        div.tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        div.tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        div.tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+        
+    </style>
+    
+</head>
+    
+<body background= "images/books.jpg">
+
+   <h1 align="center" style="color:white">BookThrifter<h1>
+       
+   <div align = 'right'>
+        <button onclick="location.href='cart.html'">My Cart</button>
+        <button onclick="location.href='favorite.html'">My Favorites</button>
+   </div>
+        
+    <div class="tab">
+      <button class="tablinks" onclick="openSection(event, 'Suspense')">Suspense</button>
+      <button class="tablinks" onclick="openSection(event, 'Horror')">Horror</button>
+      <button class="tablinks" onclick="openSection(event, 'Fiction')">Fiction</button>
+    </div>
+
+    <div id="Suspense" class="tabcontent" style="color:grey">
+      <h5>Suspense</h5>
+          <p style="text-align:center;width=1000px;">
+
+              <a href="gonegirl.html">
+                <img src="images/gonegirl.jpg" alt="Gone Girl" style="width:170px;height:228px;align:right" >
+              </a>
+              
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+              <a href="girl.html">
+              <img src="images/girl.jpg" alt="Gone Girl" style="width:170px;height:228px;align:right">
+              </a>
+
+              <br><br><br>
+
+              <a href="lamb.html">
+              <img src="images/lamb.jpg" alt="The Silence of the Lambs" style="width:170px;height:228px;">
+              </a>
+              
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              
+              <a href="code.html">
+              <img src="images/DaVinciCode.jpg" alt="The Da Vinci Code" style="width:170px;height:228px;align:right">
+              </a>
+              
+          </p>
+    </div>
+
+    <div id="Horror" class="tabcontent" style="color:grey">
+      <h5>Horror</h5>
+		<p style="text-align:center;width=1000px;">
+			
+			<a href="dracula.html">
+                <img src="images/dracula.jpg" alt="Gone Girl" style="width:170px;height:228px;align:right" >
+			</a>
+              
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+              <a href="shining.html">
+              <img src="images/shining.jpg" alt="Gone Girl" style="width:170px;height:228px;align:right">
+              </a>
+
+              <br><br><br>
+
+              <a href="it.html">
+              <img src="images/it.jpg" alt="The Silence of the Lambs" style="width:170px;height:228px;">
+              </a>
+              
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              
+              <a href="haunting.html">
+              <img src="images/haunting.jpg" alt="The Da Vinci Code" style="width:170px;height:228px;align:right">
+		  </a>
+	  </p> 
+    </div>
+
+    <div id="Fiction" class="tabcontent" style="color:grey">
+      <h5>Fiction</h5>
+      <p style="text-align:center;width=1000px;">
+
+              <a href="fountainhead.html">
+                <img src="images/fountainhead.jpg" alt="Gone Girl" style="width:170px;height:228px;align:right" >
+              </a>
+              
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+              <a href="mockingbird.html">
+              <img src="images/mockingbird.jpg" alt="Gone Girl" style="width:170px;height:228px;align:right">
+              </a>
+
+              <br><br><br>
+
+              <a href="fahrenheit.html">
+              <img src="images/fahrenheit.jpg" alt="The Silence of the Lambs" style="width:170px;height:228px;">
+              </a>
+              
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              
+              <a href="catcher.html">
+              <img src="images/catcher.jpg" alt="The Da Vinci Code" style="width:170px;height:228px;align:right">
+              </a>
+              
+          </p>
+    </div>
+
+    <script>
+        function openSection(evt, genre) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(genre).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+
+</body>
+</html> 
